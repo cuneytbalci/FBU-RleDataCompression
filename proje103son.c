@@ -9,7 +9,7 @@ int main() {
 	scanf_s("%d", &sikistircoz);
 
 	if (sikistircoz == 1) {
-		fopen_s(&dosya, "giris2.txt", "r");
+		fopen_s(&dosya, "giris1.txt", "r");
 		int i = 0;
 		char char1;
 		while (fscanf_s(dosya, "%c", &char1) != EOF) {
@@ -18,7 +18,7 @@ int main() {
 		}
 		fclose(dosya);
 
-		fopen_s(&dosya, "giris2.txt", "w");
+		fopen_s(&dosya, "giris1.txt", "w");
 		for (int k = 0; k < i - 1; k++) {
 			count = 1;
 			while (k + 1 < i - 1 && arr[k] == arr[k + 1]) {
@@ -36,14 +36,14 @@ int main() {
 		char arr2[10000];
 		char char2;
 		int num2, a = 0;
-		fopen_s(&dosya, "cikis1.txt", "r");
+		fopen_s(&dosya, "giris2.txt", "r");
 		while (fscanf_s(dosya, "%d%c ", &num2, &char2) != EOF) {
 			arr1[a] = num2;
 			arr2[a] = char2;
 			a++;
 		}
 		fclose(dosya);
-		fopen_s(&dosya, "cikis1.txt", "w");
+		fopen_s(&dosya, "giris2.txt", "w");
 		for (int j = 0; j < a; j++) {
 			while (arr1[j] != 0) {
 				fprintf(dosya, "%c", arr2[j]);
